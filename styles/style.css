@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Tamanho dos copos */
+.sizes {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.size-btn {
+  background-color: #fff;
+  border: 2px solid #4a90e2;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.size-btn:hover {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* Formulário de pedido */
+.order-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.order-form label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.order-form input[type="checkbox"] {
+  width: auto;
+}
+
+.submit-btn {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #357ab7;
+}
