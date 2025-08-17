@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="imgs/casa.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/checkbox.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <title>Gerenciamento de Pedidos</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="shortcut icon" href="imgs/casa.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/checkbox.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Gerenciamento de Pedidos</title>
 </head>
+
 <body>
-<header class="header">
+  <header class="header">
     <h1>Maldives Açaíteria</h1>
   </header>
-  
+
   <main class="main-content">
     <section class="sizes">
-      <button class="size-btn" data-size="300ml">300ml</button>
-      <button class="size-btn" data-size="400ml">400ml</button>
-      <button class="size-btn" data-size="500ml">500ml</button>
-      <button class="size-btn" data-size="770ml">770ml</button>
+      <button class="size-btn" data-size="300ml">
+        <img src="imgs/cup-img.png" alt="300ml" class="size-img">
+        300ml
+      </button>
+      <button class="size-btn" data-size="400ml">
+        <img src="imgs/cup-img.png" alt="400ml" class="size-img">
+        400ml
+      </button>
+      <button class="size-btn" data-size="550ml">
+        <img src="imgs/cup-img.png" alt="550ml" class="size-img">
+        550ml
+      </button>
+      <button class="size-btn" data-size="770ml">
+        <img src="imgs/cup-img.png" alt="770ml" class="size-img">
+        770ml
+      </button>
+
     </section>
 
     <form class="order-form">
       <label for="cliente">Cliente</label>
       <input type="text" id="cliente" name="cliente" placeholder="Nome do cliente" />
 
-      <label for="acompanhamentos">Acompanhamentos</label>
-      <textarea id="acompanhamentos" name="acompanhamentos" placeholder="Escolha seus acompanhamentos"></textarea>
+      <h2 style="margin-bottom: 10px;">Acompanhamentos</h2>
 
+      <!-- Gratuitos -->
+      <div class="acompanhamento-group">
+        <p class="acompanhamento-title">Gratuitos</p>
+        <label><input type="checkbox" name="acompanhamentos" value="Banana"> Banana</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Uva"> Uva</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Ninho"> Ninho</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Leite Condensado"> Leite Condensado</label>
+      </div>
+
+      <!-- Pagos -->
+      <div class="acompanhamento-group">
+        <p class="acompanhamento-title">Pagos</p>
+        <label><input type="checkbox" name="acompanhamentos" value="Morango"> Morango (R$2)</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Nutella"> Nutella (R$5)</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Creme de Ninho"> Creme de Ninho (R$5)</label>
+        <label><input type="checkbox" name="acompanhamentos" value="Creme de Amendoim"> Creme de Amendoim (R$4)</label>
+      </div>
+
+      <label for="observacao">Observação</label>
+      <textarea id="observacao" name="observacao" placeholder="Observações"></textarea>
+
+      <label>
+        <input type="checkbox" name="delivery" checked>
+        Delivery
+      </label>
       <label for="endereco">Endereço</label>
+
       <textarea id="endereco" name="endereco" placeholder="Endereço para entrega"></textarea>
 
-      <label class="cl-checkbox">
-        <input type="checkbox" checked>
-            <span></span>
-             Delivery
-     </label>
 
+      <button type="submit" class="submit-btn-add">Adicionar a Comanda</button>
       <button type="submit" class="submit-btn">Confirmar Pedido</button>
+
     </form>
   </main>
 </body>
+
 </html>
