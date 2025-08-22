@@ -6,13 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="shortcut icon" href="imgs/casa.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles/checkbox.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
   <title>Gerenciamento de Pedidos</title>
 </head>
 
@@ -20,67 +17,94 @@
   <header class="header">
     <h1>Maldives Açaíteria</h1>
   </header>
-
   <main class="main-content">
     <section class="sizes">
       <button class="size-btn" data-size="300ml">
-        <img src="imgs/cup-img.png" alt="300ml" class="size-img">
+        <img src="imgs/cup-img.png" alt="Copo de açaí de 300ml" class="size-img">
         300ml
       </button>
       <button class="size-btn" data-size="400ml">
-        <img src="imgs/cup-img.png" alt="400ml" class="size-img">
+        <img src="imgs/cup-img.png" alt="Copo de açaí de 400ml" class="size-img">
         400ml
       </button>
       <button class="size-btn" data-size="550ml">
-        <img src="imgs/cup-img.png" alt="550ml" class="size-img">
+        <img src="imgs/cup-img.png" alt="Copo de açaí de 550ml" class="size-img">
         550ml
       </button>
       <button class="size-btn" data-size="770ml">
-        <img src="imgs/cup-img.png" alt="770ml" class="size-img">
+        <img src="imgs/cup-img.png" alt="Copo de açaí de 770ml" class="size-img">
         770ml
       </button>
-
     </section>
-
     <form class="order-form">
-      <label for="cliente">Cliente</label>
-      <input type="text" id="cliente" name="cliente" placeholder="Nome do cliente" />
-
-      <h2 style="margin-bottom: 10px;">Acompanhamentos</h2>
-
-      <!-- Gratuitos -->
+      <div class="form-group">
+        <h4>Cliente</h4>
+        <label for="cliente"></label>
+        <input type="text" id="cliente" name="cliente" placeholder="Nome do cliente" required />
+      </div>
+      <h4 class="section-title">Acompanhamentos</h4>
       <div class="acompanhamento-group">
         <p class="acompanhamento-title">Gratuitos</p>
-        <label><input type="checkbox" name="acompanhamentos" value="Banana"> Banana</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Uva"> Uva</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Ninho"> Ninho</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Leite Condensado"> Leite Condensado</label>
+        <div class="acompanhamento-items">
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Banana"> Banana</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Uva"> Uva</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Ninho"> Ninho</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Leite Condensado"> Leite Condensado</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Abacaxi"> Abacaxi</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Maçã"> Maçã</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Amendoim"> Amendoim</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Brigadeiro"> Brigadeiro</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Beijinho"> Beijinho</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Marshmallow"> Marshmallow</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Granola"> Granola</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Aveia"> Aveia</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Doce de Leite"> Doce de Leite</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Bis"> Bis</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Tubets"> Tubets</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Gominhas"> Gominhas</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="KitKat"> KitKat</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Oreo"> Oreo</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Calda de Chocolate"> Calda de
+            Chocolate</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Calda de Morango"> Calda de Morango</label>
+          <label><input type="checkbox" name="acompanhamentos_gratis" value="Calda de Leite Condensado"> Calda de Leite
+            Condensado</label>
+        </div>
       </div>
-
-      <!-- Pagos -->
       <div class="acompanhamento-group">
         <p class="acompanhamento-title">Pagos</p>
-        <label><input type="checkbox" name="acompanhamentos" value="Morango"> Morango (R$2)</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Nutella"> Nutella (R$5)</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Creme de Ninho"> Creme de Ninho (R$5)</label>
-        <label><input type="checkbox" name="acompanhamentos" value="Creme de Amendoim"> Creme de Amendoim (R$4)</label>
+        <div class="acompanhamento-items">
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Morango"> Morango (R$3)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Nutella"> Nutella (R$7)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Ninho"> Creme de Ninho
+            (R$5)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Creme de Amendoim
+            (R$5)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Creme de Côco Bianco
+            (R$5)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Kiwi (R$2)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Ovomaltine (R$4)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Bombom (R$2)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> MM's (R$2)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Mel (R$2)</label>
+          <label><input type="checkbox" name="acompanhamentos_pagos" value="Creme de Amendoim"> Chocoball (R$2)</label>
+        </div>
       </div>
-
-      <label for="observacao">Observação</label>
-      <textarea id="observacao" name="observacao" placeholder="Observações"></textarea>
-
-      <label>
-        <input type="checkbox" name="delivery" checked>
-        Delivery
-      </label>
-      <label for="endereco">Endereço</label>
-
-      <textarea id="endereco" name="endereco" placeholder="Endereço para entrega"></textarea>
-
-
-      <button type="submit" class="submit-btn-add">Adicionar a Comanda</button>
-      <button type="submit" class="submit-btn">Confirmar Pedido</button>
-
+      <div class="form-group">
+        <h4>Observação</h4>
+        <textarea id="observacao" name="observacao" placeholder="Observações"></textarea>
+      </div>
+      <div class="form-group delivery-option">
+        <label><input type="checkbox" name="delivery" checked> Delivery</label>
+      </div>
+      <div class="form-group">
+        <h4>Endereço</h4>
+        <textarea id="endereco" name="endereco" placeholder="Endereço para entrega"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="submit-btn-add">Adicionar a Comanda</button>
+        <button type="submit" class="submit-btn">Confirmar Pedido</button>
+      </div>
     </form>
   </main>
 </body>
