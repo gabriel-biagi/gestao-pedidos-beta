@@ -186,3 +186,24 @@ h1 {
 .submit-btn-add:hover {
   background-color: #357ab7;
 }
+
+
+.order-summary-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+    display: none; 
+}
+
+.order-summary-container.active {
+    display: block;
+}
+
+.form-group-endereco.hidden {
+    display: none;
+}
