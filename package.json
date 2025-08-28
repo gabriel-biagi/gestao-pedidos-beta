@@ -16,5 +16,8 @@
     "url": "https://github.com/gabriel-biagi/gestao-pedidos-beta/issues"
   },
   "homepage": "https://github.com/gabriel-biagi/gestao-pedidos-beta#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
